@@ -23,12 +23,13 @@
 #    along with wiringPi.  If not, see <http://www.gnu.org/licenses/>.
 #################################################################################
 
-DESTDIR=/usr
+DESTDIR=/home/parallels/Documents/rpi/wiringPi
 PREFIX=/local
 
 #DEBUG	= -g -O0
 DEBUG	= -O2
-CC	= gcc
+#CC	= gcc
+CC = arm-linux-gnueabihf-gcc
 INCLUDE	= -I$(DESTDIR)$(PREFIX)/include
 CFLAGS	= $(DEBUG) -Wall $(INCLUDE) -Winline -pipe
 

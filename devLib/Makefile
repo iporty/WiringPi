@@ -22,7 +22,7 @@
 #################################################################################
 
 VERSION=$(shell cat ../VERSION)
-DESTDIR=/usr
+DESTDIR=/home/parallels/Documents/rpi/wiringPi
 PREFIX=/local
 
 STATIC=libwiringPiDev.a
@@ -30,12 +30,20 @@ DYNAMIC=libwiringPiDev.so.$(VERSION)
 
 #DEBUG	= -g -O0
 DEBUG	= -O2
-CC	= gcc
+#CC	= gcc
+CC = arm-linux-gnueabihf-gcc
 INCLUDE	= -I.
+INCLUDE	+= -I/home/parallels/Documents/rpi/wiringPi/local/include
 DEFS	= -D_GNU_SOURCE
 CFLAGS	= $(DEBUG) $(DEFS) -Wformat=2 -Wall -Winline $(INCLUDE) -pipe -fPIC
 
 LIBS    =
+
+
+#CFLAGS	= $(DEBUG) -Wall $(INCLUDE) -Winline -pipe
+
+#LDFLAGS	= -Bstatic -L/home/parallels/Documents/rpi/wiringPi/local/lib
+#LDLIBS    = -lwiringPi -lwiringPiDev -lpthread -lm
 
 ###############################################################################
 

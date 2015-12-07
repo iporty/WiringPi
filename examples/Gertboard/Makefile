@@ -7,11 +7,12 @@
 
 #DEBUG	= -g -O0
 DEBUG	= -O3
-CC	= gcc
-INCLUDE	= -I/usr/local/include
+#CC	= gcc
+CC = arm-linux-gnueabihf-gcc
+INCLUDE	= -I/home/parallels/Documents/rpi/wiringPi/local/include
 CFLAGS	= $(DEBUG) -Wall $(INCLUDE) -Winline -pipe
 
-LDFLAGS	= -L/usr/local/lib
+LDFLAGS	= -Bstatic -L/home/parallels/Documents/rpi/wiringPi/local/lib
 LDLIBS    = -lwiringPi -lwiringPiDev -lpthread -lm
 
 # Should not alter anything below this line

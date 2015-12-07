@@ -25,7 +25,8 @@
 
 #DEBUG	= -g -O0
 DEBUG	= -O3
-CC	= gcc
+#CC	= gcc
+CC = arm-linux-gnueabihf-gcc
 INCLUDE	= -I/usr/local/include
 CFLAGS	= $(DEBUG) -Wall $(INCLUDE) -Winline -pipe
 
