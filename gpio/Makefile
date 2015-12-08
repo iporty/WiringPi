@@ -23,7 +23,7 @@
 #    along with wiringPi.  If not, see <http://www.gnu.org/licenses/>.
 #################################################################################
 
-DESTDIR=/home/parallels/Documents/rpi/wiringPi
+DESTDIR=/home/ian_porteous/Documents/rpi/wiringPi
 PREFIX=/local
 
 #DEBUG	= -g -O0
