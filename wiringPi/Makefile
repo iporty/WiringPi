@@ -22,7 +22,7 @@
 #################################################################################
 
 VERSION=$(shell cat ../VERSION)
-DESTDIR=/home/parallels/Documents/rpi/wiringPi
+DESTDIR=/home/ian_porteous/Documents/rpi/wiringPi
 PREFIX=/local
 
 STATIC=libwiringPi.a
